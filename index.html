@@ -10,12 +10,16 @@
 <body>
     <main>
         <form action="index.html" method="post">
-            <input type="text" autocomplete="off" name="city" placeholder="Enter City Name">
+            <input type="text" autocomplete="off" 
+                name="city" 
+                placeholder="Enter City Name"
+                id="valueSearch"  
+                >
             <button><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
         </form>
         <section class="result">
             <figure class="name">
-                <figcaption>London</figcaption>
+                <figcaption id="city">London</figcaption>
                 <img src="https://flagsapi.com/GB/shiny/32.png" alt="London">
             </figure>
             <figure class="temperature">
@@ -32,20 +36,21 @@
                 <li>
                     <span>clouds</span>
                     <i class="fa-solid fa-cloud"></i>
-                    <span>98</span>%
+                    <span id="clouds">98</span>%
                 </li>
                 <li>
                     <span>Humidity</span>
                     <i class="fa-solid fa-droplet"></i>
-                    <span>55span>%
+                    <span id="humidity">55</span>%
                 </li>
                 <li>
                     <span>Pressure</span>
                     <i class="fa-solid fa-gauge"></i>
-                    <span>1001</span>hPa
+                    <span id="pressure">1013</span> hPa
                 </li>
              </ul>
         </section>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>
