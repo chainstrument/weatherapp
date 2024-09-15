@@ -3,6 +3,8 @@
  let city = document.getElementById('city'); 
 
  let temperature = document.getElementById('temperature');
+ 
+ 
  let description = document.querySelector('.description');
  let clouds = document.getElementById('clouds');
  let humidity = document.getElementById('humidity');
@@ -33,7 +35,15 @@ const searchWeather = () => {
        {
             city.querySelector('figcaption').innerHTML = data.name;
             city.querySelector('img').src = 'https://flagsapi.com/' + data.sys.country + '/shiny/32.png';
-       }
+            temperature.querySelector('img').src = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '@4x.png';
+       
+            temperature.querySelector('figcaption span').innerHTML = data.main.temp;
+
+            description.innerText = data.weather[0].description;
+            clouds.innerText = data.clouds.all;
+            humidity.innerText = data.main.humidity;
+            pressure.innerText = data.main.pressure;
+        }
        console.log(data.cod);
         //console.log(data.main)
  
