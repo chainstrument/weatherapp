@@ -28,7 +28,18 @@ const searchWeather = () => {
     fetch(url + '&q=' + valueSearch.value)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+       console.log(data);
+       if(data.cod == 200)
+       {
+            city.querySelector('figcaption').innerHTML = data.name;
+            city.querySelector('img').src = 'https://flagsapi.com/' + data.sys.country + '/shiny/32.png';
+       }
+       console.log(data.cod);
+        //console.log(data.main)
+ 
+
+
+        
     })
 
 
